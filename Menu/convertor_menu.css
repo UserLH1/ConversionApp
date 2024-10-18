@@ -1,48 +1,58 @@
-html{
+/* General styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: bisque;
-}
-.img_temp{
-    height: 350px;
-    position: absolute;
-    height: 300px;
-    left: 350px;
-    top: 150px;
-    width: 330px;
+    font-family: Arial, sans-serif;
 }
 
-.img_lenght{
-    height: 350px;
-    position: absolute;
-    height: 300px;
-    right: 500px;
-    top: 150px;
-    width: 350px;
-}
-.img_weight{
-    position: absolute;
-    height: 350px;
-    right: 500px;
-    bottom: 100px;
-}
-.img_speed{
-    position: absolute;
-    height: 350px;
-    left: 350px;
-    bottom: 100px;
-    width: 330px;
-}
-h1{
+/* Header styles */
+h1 {
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    position: relative;
-    top: 25px;
     text-shadow: 2px 2px 5px red;
+    margin-top: 20px;
 }
-h2{
+
+h2 {
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
-    position: relative;
-    left: 350px;
-      
+    margin-bottom: 40px;
+}
+
+/* Responsive grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Image styles */
+.grid-container img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
 }
